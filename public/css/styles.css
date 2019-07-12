@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+.back-degradado{
+    background-image: url("../img/Rectangle.png");
+
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.lineup{
+    border-top: 5px solid transparent;
+}
+.lineup:hover{
+    border-top: 5px solid white;
+
+}
+.gradient{
+    background: linear-gradient(270deg, #8BDA5A -10.32%, #1435B9 100%);
+}
+
+.gradient-comercio{
+    background-image: url('../img/comercio/banner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.op-s{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 82px;
+}
+.section-blue{
+    background: #1D42B1;
+    
+}
+.section-green{
+    background: #88D65C;
+}
+.section-white{
+    background: #F5F5F5;
+}
+
+#menuToggle
+{
+    width: 50px;
+    height: 50px;
+    right: 20px;
+    top: 15px;
+    position: fixed;
+    cursor: pointer;
+    z-index: 99;
+  
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 45px;
+  height: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #ffffff;
+  border-radius: 0px;
+  
+  z-index: 1;
+  
+  transform-origin: 10px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.15,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-5px, -0px);
+  background: blue ;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, 0px);
+}
+
+
+#menu
+{
+    
+    position: fixed;
+    width: 100%;
+    padding: 50px;
+    padding-top: 100px;
+    
+  
+    
+    right: -25%;
+    height: 100%;
+    top: 0;
+
+    overflow: scroll;
+    
+    transition: all .3s;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  
+  transform-origin: 100% 0%;
+  transform: translate(100%, 0%);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+
+    
